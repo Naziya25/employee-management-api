@@ -1,0 +1,13 @@
+
+services:
+  employee-api:
+    build: .
+    container_name: employee-api-compose
+    ports:
+      - "8001:8000"
+    volumes:
+      - employee-data:/app/data
+
+volumes:
+  employee-data:
+    external: true
